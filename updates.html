@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Updates | Post-News</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news-header {
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .news-date {
+            color: var(--accent-green);
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .source-link {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        .impact-section {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(255, 65, 65, 0.1);
+            border-left: 3px solid #ff4141;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">&lt;/Mahesh&gt;</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="updates.html" class="nav-link active">Daily Updates</a>
+            <a href="attacks.html" class="nav-link">Cyber Attacks</a>
+            <a href="report.html" class="nav-link">Report Incident</a>
+            <a href="tools.html" class="nav-link">Temp ID/OTP</a>
+            <a href="career.html" class="nav-link">Career & Skills</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section style="padding-top: 8rem; min-height: auto;">
+            <h1 class="animate">Security Intelligence</h1>
+            <p class="animate delay-1">Real-time tracking of data breaches, leaks, and critical vulnerabilities.</p>
+        </section>
+
+        <!-- What Matters Now -->
+        <section style="padding-top: 0;">
+            <h2 class="animate" style="color: #ff4141;">⚠️ Critical Alerts (Jan 2026)</h2>
+            <div class="grid">
+                <!-- Instagram -->
+                <div class="card animate delay-1">
+                    <span class="news-date">Jan 2026</span>
+                    <h3>Instagram Data Leak</h3>
+                    <p><strong>17.5 Million Accounts Exposed</strong></p>
+                    <p style="margin-top: 0.5rem; color: #ccc;">
+                        Emails, phone numbers, and user IDs exposed on the dark web. Hackers are using this data for
+                        password-reset phishing campaigns.
+                    </p>
+                    <div class="impact-section">
+                        <strong>Risk:</strong> High. Watch out for fake "Reset Password" emails.
+                    </div>
+                </div>
+
+                <!-- Endesa -->
+                <div class="card animate delay-2">
+                    <span class="news-date">Jan 2026</span>
+                    <h3>Endesa (Spain) Breach</h3>
+                    <p><strong>20 Million Files Stolen</strong></p>
+                    <p style="margin-top: 0.5rem; color: #ccc;">
+                        Energy giant confirmed unauthorized access. Customer IDs, payment info, and contact details are
+                        allegedly up for sale.
+                    </p>
+                </div>
+
+                <!-- Oracle -->
+                <div class="card animate delay-3">
+                    <span class="news-date">Jan 2026</span>
+                    <h3>Oracle E-Business Suite</h3>
+                    <p><strong>Ransomware Extortion</strong></p>
+                    <p style="margin-top: 0.5rem; color: #ccc;">
+                        Clop ransomware group continues to demand ransom. Stolen data includes sensitive personal and
+                        financial corporate information.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2025 Timeline -->
+        <section>
+            <h2 class="animate">Recent Breach Timeline (2025)</h2>
+            <div class="grid">
+                <div class="card animate delay-1">
+                    <span class="news-date">Nov 2025</span>
+                    <h3>Mixpanel / OpenAI Link</h3>
+                    <p>Analytics and customer identity data accessed. Passwords were safe, but usage data was exposed.
+                    </p>
+                </div>
+
+                <div class="card animate delay-2">
+                    <span class="news-date">Sep 2025</span>
+                    <h3>DIRIN Leaks (Peru)</h3>
+                    <p>National police intelligence agency data leaked online, including internal documents and personal
+                        info.</p>
+                </div>
+
+                <div class="card animate delay-3">
+                    <span class="news-date">July 2025</span>
+                    <h3>Allianz Life Breach</h3>
+                    <p><strong>1.4 Million Customers</strong></p>
+                    <p>Unauthorized access via third-party CRM exposed sensitive policyholder data.</p>
+                </div>
+
+                <div class="card animate delay-1">
+                    <span class="news-date">Apr 2025</span>
+                    <h3>SK Telecom USIM</h3>
+                    <p>Critical authentication keys (IMSI/KI) leaked, potentially allowing SIM cloning and interception.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mega Leaks -->
+        <section>
+            <h2 class="animate">Massive "Mega-Leaks"</h2>
+            <div class="card animate delay-1" style="margin-bottom: 2rem;">
+                <h3>The 16 Billion Credential Leak</h3>
+                <p>
+                    Researchers confirmed a compilation of <strong>16 billion</strong> compromised logins including
+                    Google, Facebook, and Apple accounts circulating on forums.
+                </p>
+                <div class="impact-section"
+                    style="background: rgba(0, 210, 255, 0.1); border-color: var(--accent-blue);">
+                    <strong>Action:</strong> Use a Password Manager and enable 2FA everywhere. Old passwords are likely
+                    compromised.
+                </div>
+            </div>
+
+            <div class="card animate delay-2">
+                <h3>250 Million Identities (Sep 2025)</h3>
+                <p>
+                    Misconfigured servers across 7 countries exposed names, DOBS, addresses, and national ID numbers
+                    publicly.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mahesh Chander. Stay Vigilant.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

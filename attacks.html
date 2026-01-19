@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Cyber Attacks | Awareness</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .attack-icon {
+            font-size: 2rem;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+        }
+
+        .prevention-tip {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(0, 255, 65, 0.05);
+            border-left: 3px solid var(--accent-green);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .severity-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .sev-critical {
+            background: rgba(255, 0, 0, 0.2);
+            color: #ff4444;
+            border: 1px solid #ff4444;
+        }
+
+        .sev-high {
+            background: rgba(255, 165, 0, 0.2);
+            color: #ffa500;
+            border: 1px solid #ffa500;
+        }
+
+        .sev-med {
+            background: rgba(0, 210, 255, 0.2);
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">&lt;/Mahesh&gt;</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="updates.html" class="nav-link">Daily Updates</a>
+            <a href="attacks.html" class="nav-link active">Cyber Attacks</a>
+            <a href="report.html" class="nav-link">Report Incident</a>
+            <a href="tools.html" class="nav-link">Temp ID/OTP</a>
+            <a href="career.html" class="nav-link">Career & Skills</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section style="padding-top: 8rem; min-height: auto;">
+            <h1 class="animate">Types of Cyber Attacks</h1>
+            <p class="animate delay-1">Understanding the threat landscape is the first step in defense. Here are the
+                most common vectors used by attackers.</p>
+        </section>
+
+        <section style="padding-top: 0;">
+            <!-- Social Engineering -->
+            <h2 class="animate">Social Engineering</h2>
+            <div class="grid" style="margin-bottom: 4rem;">
+                <div class="card animate delay-1">
+                    <div class="severity-badge sev-critical">Most Common</div>
+                    <h3>Phishing</h3>
+                    <p>Attackers masquerade as trusted entities (e.g., banks, Instagram) via email or SMS to steal
+                        sensitive data like login credentials or credit card info.</p>
+                    <div class="prevention-tip">
+                        <strong>Defense:</strong> Verify sender email addresses and never click suspicious links. Use
+                        2FA.
+                    </div>
+                </div>
+                <div class="card animate delay-2">
+                    <div class="severity-badge sev-high">High Risk</div>
+                    <h3>Pretexting</h3>
+                    <p>The attacker creates a fabricated scenario (pretext) to pressure a victim into divulging
+                        information, often impersonating bosses or IT support.</p>
+                </div>
+            </div>
+
+            <!-- Malware -->
+            <h2 class="animate">Malware Attacks</h2>
+            <div class="grid" style="margin-bottom: 4rem;">
+                <div class="card animate delay-1">
+                    <div class="severity-badge sev-critical">Critical</div>
+                    <h3>Ransomware</h3>
+                    <p>Malware that encrypts a victim's files. The attacker demands a ransom from the victim to restore
+                        access to the data.</p>
+                    <div class="prevention-tip">
+                        <strong>Defense:</strong> Regular offline backups and up-to-date antivirus software.
+                    </div>
+                </div>
+                <div class="card animate delay-2">
+                    <div class="severity-badge sev-high">High</div>
+                    <h3>Spyware & Keyloggers</h3>
+                    <p>Software that secretly records user activity, keystrokes, and data, sending it to the attacker
+                        without the user's knowledge.</p>
+                </div>
+                <div class="card animate delay-3">
+                    <div class="severity-badge sev-high">High</div>
+                    <h3>Trojan Horse</h3>
+                    <p>Malicious software disguised as legitimate programs. Once installed, it creates a backdoor for
+                        attackers to access the system.</p>
+                </div>
+            </div>
+
+            <!-- Web & Network -->
+            <h2 class="animate">Web & Network Attacks</h2>
+            <div class="grid">
+                <div class="card animate delay-1">
+                    <div class="severity-badge sev-critical">Critical</div>
+                    <h3>SQL Injection (SQLi)</h3>
+                    <p>Attackers interfere with the queries an application makes to its database, allowing them to view
+                        or modify data they shouldn't access.</p>
+                    <div class="prevention-tip">
+                        <strong>Defense:</strong> Use prepared statements and parameterized queries.
+                    </div>
+                </div>
+                <div class="card animate delay-2">
+                    <div class="severity-badge sev-high">High</div>
+                    <h3>DDoS</h3>
+                    <p>Distributed Denial-of-Service. Flooding a server with traffic from multiple sources to crash it
+                        and make it unavailable to users.</p>
+                </div>
+                <div class="card animate delay-3">
+                    <div class="severity-badge sev-med">Medium</div>
+                    <h3>Man-in-the-Middle (MitM)</h3>
+                    <p>Attackers secretly intercept and possibly alter the communication between two parties who believe
+                        they are communicating directly.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mahesh Chander. Knowledge is Power.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

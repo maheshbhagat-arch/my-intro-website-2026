@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Tools | Coming Soon</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .coming-soon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+        }
+
+        .lock-icon {
+            font-size: 5rem;
+            color: var(--accent-green);
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--accent-blue);
+            animation: spin 1s ease-in-out infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">&lt;/Mahesh&gt;</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="updates.html" class="nav-link">Daily Updates</a>
+            <a href="attacks.html" class="nav-link">Cyber Attacks</a>
+            <a href="report.html" class="nav-link">Report Incident</a>
+            <a href="tools.html" class="nav-link active">Temp ID/OTP</a>
+            <a href="career.html" class="nav-link">Career & Skills</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="coming-soon-container animate">
+            <div class="lock-icon">🔒</div>
+            <h1>Coming Soon</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin-top: 1rem;">
+                We are building powerful tools for your privacy. <br>
+                <span style="color: var(--accent-blue);">Temporary IDs, Disposable Numbers, and OTP Bypass tools</span>
+                are currently in development.
+            </p>
+            <div class="loader"></div>
+            <p style="font-size: 0.9rem; color: #555;">Expected Release: Q2 2026</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mahesh Chander. Privacy Matters.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

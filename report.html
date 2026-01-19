@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident | Cyber Security</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">&lt;/Mahesh&gt;</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="updates.html" class="nav-link">Daily Updates</a>
+            <a href="attacks.html" class="nav-link">Cyber Attacks</a>
+            <a href="report.html" class="nav-link active">Report Incident</a>
+            <a href="tools.html" class="nav-link">Temp ID/OTP</a>
+            <a href="career.html" class="nav-link">Career & Skills</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section style="padding-top: 8rem; min-height: auto;">
+            <h1 class="animate">Report Cyber Incident</h1>
+            <p class="animate delay-1">Securely document and report cyber scams or security breaches.</p>
+        </section>
+
+        <section style="padding-top: 0;">
+            <div class="card animate delay-2" style="max-width: 800px; margin: 0 auto;">
+
+                <div class="case-id-display" id="caseIdDisplay">
+                    Generating Case ID...
+                </div>
+
+                <form id="reportForm">
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="fullName" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Age</label>
+                            <input type="number" id="age" required placeholder="25">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Current Occupation</label>
+                        <input type="text" id="occupation" required placeholder="Software Engineer, Student, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Incident Type</label>
+                        <select id="incidentType" required>
+                            <option value="" disabled selected>Select the type of scam/fraud...</option>
+                            <option value="Identity Theft">Identity Theft</option>
+                            <option value="Account Takeover">Account Takeover</option>
+                            <option value="SIM Swap Fraud">SIM Swap Fraud</option>
+                            <option value="Email Compromise (BEC)">Email Compromise (BEC)</option>
+                            <option value="UPI Fraud">UPI Fraud</option>
+                            <option value="Credit Card Fraud">Credit Card Fraud</option>
+                            <option value="Debit Card Fraud">Debit Card Fraud</option>
+                            <option value="OTP Fraud">OTP Fraud</option>
+                            <option value="Loan App Fraud">Loan App Fraud</option>
+                            <option value="Refund Scam">Refund Scam</option>
+                            <option value="Phishing">Phishing</option>
+                            <option value="Smishing">Smishing</option>
+                            <option value="Vishing">Vishing</option>
+                            <option value="Deepfake Fraud">Deepfake Fraud</option>
+                            <option value="Sextortion">Sextortion</option>
+                            <option value="Blackmailing">Blackmailing</option>
+                            <option value="Honey Trap Scam">Honey Trap Scam</option>
+                            <option value="Revenge Porn">Revenge Porn</option>
+                            <option value="Data Extortion">Data Extortion</option>
+                            <option value="Crypto Blackmail Scam">Crypto Blackmail Scam</option>
+                            <option value="Fake Job Scam">Fake Job Scam</option>
+                            <option value="Work-From-Home Scam">Work-From-Home Scam</option>
+                            <option value="Investment Scam">Investment Scam</option>
+                            <option value="Crypto Scam">Crypto Scam</option>
+                            <option value="Ponzi Scheme">Ponzi Scheme</option>
+                            <option value="MLM Scam">MLM Scam</option>
+                            <option value="Fake Seller Scam">Fake Seller Scam</option>
+                            <option value="Fake Buyer Scam">Fake Buyer Scam</option>
+                            <option value="Online Shopping Scam">Online Shopping Scam</option>
+                            <option value="Fake Customer Support Scam">Fake Customer Support Scam</option>
+                            <option value="Malware Scam">Malware Scam</option>
+                            <option value="Spyware Attack">Spyware Attack</option>
+                            <option value="Remote Access Scam">Remote Access Scam</option>
+                            <option value="Keylogging Attack">Keylogging Attack</option>
+                            <option value="Ransomware Attack">Ransomware Attack</option>
+                            <option value="Fake Police Scam">Fake Police Scam</option>
+                            <option value="Fake Government Notice Scam">Fake Government Notice Scam</option>
+                            <option value="Romance Scam">Romance Scam</option>
+                            <option value="Social Media Impersonation Scam">Social Media Impersonation Scam</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="tel" id="mobile" required placeholder="+91 XXXXX XXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label>Alternate Number (Optional)</label>
+                            <input type="tel" id="altMobile" placeholder="+91 XXXXX XXXXX">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Incident Details</label>
+                        <textarea id="details" required
+                            placeholder="Describe what happened: Scam type, date, financial loss, etc."></textarea>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <button type="button" class="btn" onclick="generatePDF()">Generate PDF Report</button>
+                        <button type="submit" class="btn" style="background: var(--accent-green); color: #000;">Submit
+                            Report</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mahesh Chander. Secure Reporting System.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Generate Random Case ID on Load
+        const caseId = 'CYB-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+        document.getElementById('caseIdDisplay').innerText = "CASE ID: " + caseId;
+
+        // Form Submit Handler
+        document.getElementById('reportForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Report Submitted Successfully! Server logging is simulated in this demo.');
+        });
+
+        // Generate PDF
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const name = document.getElementById('fullName').value;
+            const age = document.getElementById('age').value;
+            const occupation = document.getElementById('occupation').value;
+            const incidentType = document.getElementById('incidentType').value || 'Not Specified';
+            const mobile = document.getElementById('mobile').value;
+            const altMobile = document.getElementById('altMobile').value || 'N/A';
+            const details = document.getElementById('details').value;
+
+            // PDF Styling
+            doc.setFontSize(22);
+            doc.setTextColor(0, 0, 0);
+            doc.text("Cyber Incident Report", 20, 20);
+
+            doc.setFontSize(12);
+            doc.setTextColor(100);
+            doc.text("Case Reference: " + caseId, 20, 30);
+            doc.text("Date: " + new Date().toLocaleDateString(), 20, 36);
+
+            doc.setLineWidth(0.5);
+            doc.line(20, 40, 190, 40);
+
+            doc.setTextColor(0);
+            doc.setFontSize(14);
+            doc.text("Reporter Details", 20, 50);
+
+            doc.setFontSize(11);
+            doc.text(`Name: ${name}`, 20, 60);
+            doc.text(`Age: ${age}`, 20, 66);
+            doc.text(`Occupation: ${occupation}`, 20, 72);
+            doc.text(`Contact: ${mobile}`, 20, 78);
+            doc.text(`Alt Contact: ${altMobile}`, 20, 84);
+
+            doc.setFontSize(14);
+            doc.text("Incident Information", 20, 100);
+
+            doc.setFontSize(11);
+            doc.setTextColor(200, 0, 0);
+            doc.text(`Type: ${incidentType}`, 20, 110);
+
+            doc.setTextColor(0);
+            doc.text("Description:", 20, 118);
+            const splitDetails = doc.splitTextToSize(details, 170);
+            doc.text(splitDetails, 20, 125);
+
+            doc.text("--- End of Report ---", 20, 280);
+
+            doc.save(`Incident_Report_${caseId}.pdf`);
+        }
+    </script>
+</body>
+
+</html>
